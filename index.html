@@ -3,7 +3,7 @@
  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pixel Quest</title>
+  <title>Pixel Wanderer</title>
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
@@ -50,7 +50,7 @@
   <script>
     // Game Configuration
     const defaultConfig = {
-      game_title: 'Pixel Quest',
+      game_title: 'Pixel Wanderer',
       background_color: '#0f0f23',
       surface_color: '#1a1a2e',
       text_color: '#e0e0ff',
@@ -156,12 +156,12 @@
       1: { name: 'Jungle Vines', bgColor: '#1a3a1a', groundColor: '#2d5a2d', width: 2400, vertical: false, platforms: [{ x: 0, y: 450, w: 600, h: 50 }, { x: 700, y: 400, w: 200, h: 30 }, { x: 1000, y: 350, w: 150, h: 30 }, { x: 1200, y: 450, w: 400, h: 50 }, { x: 1700, y: 380, w: 200, h: 30 }, { x: 2000, y: 450, w: 400, h: 50 }], enemies: [{ type: 'VINE_SPIDER', x: 400, y: 420 }, { type: 'VINE_SPIDER', x: 800, y: 370 }, { type: 'POISON_WASP', x: 1100, y: 250 }, { type: 'VINE_SPIDER', x: 1400, y: 420 }], powerUp: 'FIREBALL', endX: 2300 },
       2: { name: 'Sandy Desert', bgColor: '#3a3a1a', groundColor: '#cc9944', width: 2800, vertical: false, platforms: [{ x: 0, y: 450, w: 400, h: 50 }, { x: 500, y: 380, w: 150, h: 30 }, { x: 750, y: 300, w: 150, h: 30 }, { x: 1000, y: 380, w: 200, h: 30 }, { x: 1300, y: 450, w: 300, h: 50 }, { x: 1700, y: 350, w: 200, h: 30 }, { x: 2000, y: 280, w: 150, h: 30 }, { x: 2250, y: 350, w: 200, h: 30 }, { x: 2500, y: 450, w: 300, h: 50 }], enemies: [{ type: 'SAND_SCORPION', x: 300, y: 400 }, { type: 'SAND_SCORPION', x: 600, y: 280 }, { type: 'SAND_SCORPION', x: 900, y: 200 }, { type: 'SAND_SCORPION', x: 1400, y: 400 }, { type: 'SAND_SCORPION', x: 1800, y: 250 }, { type: 'SAND_SCORPION', x: 2100, y: 230 }], powerUp: 'WIND', endX: 2700 },
       3: { name: 'Beach Paradise', bgColor: '#ccaa44', groundColor: '#ddbb55', width: 3200, vertical: false, platforms: [{ x: 0, y: 450, w: 350, h: 50 }, { x: 450, y: 400, w: 120, h: 30 }, { x: 650, y: 340, w: 120, h: 30 }, { x: 850, y: 280, w: 120, h: 30 }, { x: 1050, y: 350, w: 200, h: 30 }, { x: 1350, y: 450, w: 400, h: 50 }, { x: 1850, y: 380, w: 150, h: 30 }, { x: 2100, y: 300, w: 150, h: 30 }, { x: 2350, y: 380, w: 150, h: 30 }, { x: 2600, y: 450, w: 200, h: 50 }, { x: 2900, y: 450, w: 300, h: 50 }], enemies: [{ type: 'HERMIT_CRAB', x: 300, y: 350 }, { type: 'HERMIT_CRAB', x: 550, y: 360 }, { type: 'POISON_WASP', x: 750, y: 240 }, { type: 'POISON_WASP', x: 1000, y: 200 }, { type: 'HERMIT_CRAB', x: 1500, y: 400 }, { type: 'HERMIT_CRAB', x: 1950, y: 280 }, { type: 'POISON_WASP', x: 2200, y: 250 }, { type: 'HERMIT_CRAB', x: 2450, y: 280 }], powerUp: 'BUBBLE', endX: 3100 },
-      4: { name: 'Coral Reef', bgColor: '#0a2a4a', groundColor: '#1a5a8a', width: 3400, vertical: false, platforms: [{ x: 0, y: 450, w: 300, h: 50 }, { x: 400, y: 380, w: 150, h: 30 }, { x: 650, y: 300, w: 150, h: 30 }, { x: 900, y: 380, w: 150, h: 30 }, { x: 1150, y: 450, w: 250, h: 50 }, { x: 1500, y: 350, w: 150, h: 30 }, { x: 1750, y: 270, w: 150, h: 30 }, { x: 2000, y: 350, w: 150, h: 30 }, { x: 2250, y: 450, w: 300, h: 50 }, { x: 2650, y: 380, w: 150, h: 30 }, { x: 2900, y: 300, w: 150, h: 30 }, { x: 3150, y: 450, w: 250, h: 50 }], enemies: [{ type: 'JELLYFISH', x: 250, y: 300 }, { type: 'HERMIT_CRAB', x: 500, y: 350 }, { type: 'JELLYFISH', x: 750, y: 250 }, { type: 'HERMIT_CRAB', x: 1000, y: 350 }, { type: 'JELLYFISH', x: 1300, y: 300 }, { type: 'HERMIT_CRAB', x: 1600, y: 320 }, { type: 'JELLYFISH', x: 1900, y: 250 }, { type: 'HERMIT_CRAB', x: 2100, y: 320 }, { type: 'JELLYFISH', x: 2400, y: 300 }, { type: 'HERMIT_CRAB', x: 2750, y: 330 }, { type: 'JELLYFISH', x: 3000, y: 250 }], powerUp: 'ICE', endX: 3300 },
+      4: { name: 'Coral Reef', bgColor: '#1864b1', groundColor: '#ddbb55', width: 3400, vertical: false, platforms: [{ x: 0, y: 450, w: 300, h: 50 }, { x: 400, y: 380, w: 150, h: 30 }, { x: 650, y: 300, w: 150, h: 30 }, { x: 900, y: 380, w: 150, h: 30 }, { x: 1150, y: 450, w: 250, h: 50 }, { x: 1500, y: 350, w: 150, h: 30 }, { x: 1750, y: 270, w: 150, h: 30 }, { x: 2000, y: 350, w: 150, h: 30 }, { x: 2250, y: 450, w: 300, h: 50 }, { x: 2650, y: 380, w: 150, h: 30 }, { x: 2900, y: 300, w: 150, h: 30 }, { x: 3150, y: 450, w: 250, h: 50 }], enemies: [{ type: 'JELLYFISH', x: 250, y: 300 }, { type: 'HERMIT_CRAB', x: 500, y: 350 }, { type: 'JELLYFISH', x: 750, y: 250 }, { type: 'HERMIT_CRAB', x: 1000, y: 350 }, { type: 'JELLYFISH', x: 1300, y: 300 }, { type: 'HERMIT_CRAB', x: 1600, y: 320 }, { type: 'JELLYFISH', x: 1900, y: 250 }, { type: 'HERMIT_CRAB', x: 2100, y: 320 }, { type: 'JELLYFISH', x: 2400, y: 300 }, { type: 'HERMIT_CRAB', x: 2750, y: 330 }, { type: 'JELLYFISH', x: 3000, y: 250 }], powerUp: 'ICE', endX: 3300 },
       5: { name: 'Ocean Depths', bgColor: '#0a1a3a', groundColor: '#1a3a5a', width: 3600, vertical: false, platforms: [{ x: 0, y: 450, w: 300, h: 50 }, { x: 400, y: 380, w: 150, h: 30 }, { x: 650, y: 450, w: 200, h: 50 }, { x: 950, y: 350, w: 150, h: 30 }, { x: 1200, y: 280, w: 150, h: 30 }, { x: 1450, y: 350, w: 150, h: 30 }, { x: 1700, y: 450, w: 300, h: 50 }, { x: 2100, y: 380, w: 150, h: 30 }, { x: 2350, y: 300, w: 200, h: 30 }, { x: 2650, y: 380, w: 150, h: 30 }, { x: 2900, y: 450, w: 200, h: 50 }, { x: 3200, y: 450, w: 400, h: 50 }], enemies: [{ type: 'JELLYFISH', x: 250, y: 300 }, { type: 'SHARK', x: 500, y: 380 }, { type: 'JELLYFISH', x: 750, y: 350 }, { type: 'SHARK', x: 1050, y: 250 }, { type: 'JELLYFISH', x: 1300, y: 200 }, { type: 'SHARK', x: 1550, y: 250 }, { type: 'JELLYFISH', x: 1850, y: 300 }, { type: 'SHARK', x: 2200, y: 330 }, { type: 'JELLYFISH', x: 2450, y: 200 }, { type: 'SHARK', x: 2750, y: 330 }, { type: 'JELLYFISH', x: 3000, y: 350 }], powerUp: 'LIGHTNING', endX: 3500 },
       6: { name: 'Glacier Peaks', bgColor: '#1a2a3a', groundColor: '#a0d8ff', width: 4000, vertical: false, platforms: [{ x: 0, y: 450, w: 250, h: 50 }, { x: 350, y: 380, w: 120, h: 30 }, { x: 550, y: 300, w: 120, h: 30 }, { x: 750, y: 380, w: 120, h: 30 }, { x: 950, y: 450, w: 200, h: 50 }, { x: 1250, y: 350, w: 150, h: 30 }, { x: 1500, y: 270, w: 150, h: 30 }, { x: 1750, y: 350, w: 150, h: 30 }, { x: 2000, y: 450, w: 250, h: 50 }, { x: 2350, y: 380, w: 120, h: 30 }, { x: 2550, y: 300, w: 120, h: 30 }, { x: 2750, y: 220, w: 120, h: 30 }, { x: 2950, y: 300, w: 120, h: 30 }, { x: 3150, y: 380, w: 150, h: 30 }, { x: 3400, y: 450, w: 200, h: 50 }, { x: 3700, y: 450, w: 300, h: 50 }], enemies: [{ type: 'ICE_GOLEM', x: 150, y: 400 }, { type: 'ICE_GOLEM', x: 550, y: 270 }, { type: 'ICE_GOLEM', x: 1050, y: 400 }, { type: 'ICE_GOLEM', x: 1600, y: 210 }, { type: 'ICE_GOLEM', x: 2100, y: 400 }, { type: 'ICE_GOLEM', x: 2750, y: 150 }, { type: 'ICE_GOLEM', x: 3250, y: 330 }, { type: 'ICE_GOLEM', x: 3800, y: 350 }], powerUp: 'EARTH', endX: 3900 },
       7: { name: 'Cave', bgColor: '#1a1a3a', groundColor: '#3a3a5a', width: 3000, vertical: false, platforms: [{ x: 0, y: 450, w: 300, h: 50 }, { x: 400, y: 380, w: 150, h: 30 }, { x: 650, y: 300, w: 150, h: 30 }, { x: 900, y: 380, w: 150, h: 30 }, { x: 1150, y: 450, w: 250, h: 50 }, { x: 1500, y: 350, w: 150, h: 30 }, { x: 1750, y: 270, w: 150, h: 30 }, { x: 2000, y: 350, w: 150, h: 30 }, { x: 2250, y: 450, w: 300, h: 50 }, { x: 2650, y: 380, w: 150, h: 30 }, { x: 2850, y: 450, w: 150, h: 50 }], enemies: [{ type: 'BAT', x: 300, y: 250 }, { type: 'VINE_SPIDER', x: 550, y: 270 }, { type: 'BAT', x: 850, y: 280 }, { type: 'VINE_SPIDER', x: 1100, y: 400 }, { type: 'BAT', x: 1550, y: 200 }, { type: 'VINE_SPIDER', x: 1850, y: 230 }, { type: 'BAT', x: 2100, y: 250 }, { type: 'VINE_SPIDER', x: 2400, y: 400 }], powerUp: 'ICE', endX: 2900 },
       8: { name: 'Mountain Ruins', bgColor: '#0a0a0a', groundColor: '#696969', width: 3200, vertical: false, platforms: [{ x: 0, y: 450, w: 300, h: 50 }, { x: 400, y: 380, w: 150, h: 30 }, { x: 650, y: 300, w: 150, h: 30 }, { x: 900, y: 380, w: 150, h: 30 }, { x: 1150, y: 450, w: 250, h: 50 }, { x: 1500, y: 350, w: 150, h: 30 }, { x: 1750, y: 270, w: 150, h: 30 }, { x: 2000, y: 350, w: 150, h: 30 }, { x: 2250, y: 450, w: 300, h: 50 }, { x: 2650, y: 380, w: 150, h: 30 }, { x: 2900, y: 300, w: 150, h: 30 }, { x: 3100, y: 450, w: 100, h: 50 }], enemies: [{ type: 'STONE_GIANT', x: 250, y: 350 }, { type: 'POISON_WASP', x: 550, y: 250 }, { type: 'STONE_GIANT', x: 850, y: 250 }, { type: 'POISON_WASP', x: 1050, y: 350 }, { type: 'STONE_GIANT', x: 1400, y: 300 }, { type: 'POISON_WASP', x: 1700, y: 200 }, { type: 'STONE_GIANT', x: 2000, y: 300 }, { type: 'POISON_WASP', x: 2350, y: 350 }, { type: 'STONE_GIANT', x: 2700, y: 300 }], powerUp: 'FIREBALL', endX: 3100 },
-      9: { name: 'Mountain Climb', bgColor: '#87ceeb', groundColor: '#696969', width: 4400, vertical: false, platforms: [{ x: 0, y: 450, w: 250, h: 50 }, { x: 350, y: 380, w: 120, h: 30 }, { x: 550, y: 300, w: 120, h: 30 }, { x: 750, y: 380, w: 120, h: 30 }, { x: 950, y: 450, w: 200, h: 50 }, { x: 1250, y: 350, w: 150, h: 30 }, { x: 1500, y: 270, w: 150, h: 30 }, { x: 1750, y: 350, w: 150, h: 30 }, { x: 2000, y: 450, w: 250, h: 50 }, { x: 2350, y: 380, w: 120, h: 30 }, { x: 2550, y: 300, w: 120, h: 30 }, { x: 2750, y: 220, w: 120, h: 30 }, { x: 2950, y: 300, w: 120, h: 30 }, { x: 3150, y: 380, w: 150, h: 30 }, { x: 3400, y: 450, w: 200, h: 50 }, { x: 3700, y: 380, w: 150, h: 30 }, { x: 4000, y: 300, w: 200, h: 30 }, { x: 4200, y: 450, w: 200, h: 50 }], enemies: [{ type: 'STONE_GIANT', x: 150, y: 350 }, { type: 'STONE_GIANT', x: 450, y: 250 }, { type: 'STONE_GIANT', x: 650, y: 200 }, { type: 'STONE_GIANT', x: 850, y: 250 }, { type: 'STONE_GIANT', x: 1050, y: 350 }, { type: 'STONE_GIANT', x: 1350, y: 250 }, { type: 'STONE_GIANT', x: 1600, y: 180 }, { type: 'STONE_GIANT', x: 1850, y: 250 }, { type: 'STONE_GIANT', x: 2100, y: 350 }, { type: 'STONE_GIANT', x: 2450, y: 280 }, { type: 'STONE_GIANT', x: 2650, y: 200 }, { type: 'STONE_GIANT', x: 2850, y: 100 }, { type: 'STONE_GIANT', x: 3050, y: 200 }, { type: 'STONE_GIANT', x: 3250, y: 280 }, { type: 'STONE_GIANT', x: 3500, y: 350 }, { type: 'STONE_GIANT', x: 3800, y: 280 }, { type: 'STONE_GIANT', x: 4050, y: 200 }], powerUp: 'WIND', endX: 4300 },
+      9: { name: 'Mountain Climb', bgColor: '#87b5eb', groundColor: '#696969', width: 4400, vertical: false, platforms: [{ x: 0, y: 450, w: 250, h: 50 }, { x: 350, y: 380, w: 120, h: 30 }, { x: 550, y: 300, w: 120, h: 30 }, { x: 750, y: 380, w: 120, h: 30 }, { x: 950, y: 450, w: 200, h: 50 }, { x: 1250, y: 350, w: 150, h: 30 }, { x: 1500, y: 270, w: 150, h: 30 }, { x: 1750, y: 350, w: 150, h: 30 }, { x: 2000, y: 450, w: 250, h: 50 }, { x: 2350, y: 380, w: 120, h: 30 }, { x: 2550, y: 300, w: 120, h: 30 }, { x: 2750, y: 220, w: 120, h: 30 }, { x: 2950, y: 300, w: 120, h: 30 }, { x: 3150, y: 380, w: 150, h: 30 }, { x: 3400, y: 450, w: 200, h: 50 }, { x: 3700, y: 380, w: 150, h: 30 }, { x: 4000, y: 300, w: 200, h: 30 }, { x: 4200, y: 450, w: 200, h: 50 }], enemies: [{ type: 'STONE_GIANT', x: 150, y: 350 }, { type: 'STONE_GIANT', x: 450, y: 250 }, { type: 'STONE_GIANT', x: 650, y: 200 }, { type: 'STONE_GIANT', x: 850, y: 250 }, { type: 'STONE_GIANT', x: 1050, y: 350 }, { type: 'STONE_GIANT', x: 1350, y: 250 }, { type: 'STONE_GIANT', x: 1600, y: 180 }, { type: 'STONE_GIANT', x: 1850, y: 250 }, { type: 'STONE_GIANT', x: 2100, y: 350 }, { type: 'STONE_GIANT', x: 2450, y: 280 }, { type: 'STONE_GIANT', x: 2650, y: 200 }, { type: 'STONE_GIANT', x: 2850, y: 100 }, { type: 'STONE_GIANT', x: 3050, y: 200 }, { type: 'STONE_GIANT', x: 3250, y: 280 }, { type: 'STONE_GIANT', x: 3500, y: 350 }, { type: 'STONE_GIANT', x: 3800, y: 280 }, { type: 'STONE_GIANT', x: 4050, y: 200 }], powerUp: 'WIND', endX: 4300 },
       10: { name: 'Lava Cavern', bgColor: '#1a0a0a', groundColor: '#8b0000', width: 3200, vertical: false, platforms: [{ x: 0, y: 450, w: 300, h: 50 }, { x: 400, y: 380, w: 150, h: 30 }, { x: 650, y: 450, w: 200, h: 50 }, { x: 950, y: 350, w: 150, h: 30 }, { x: 1200, y: 280, w: 150, h: 30 }, { x: 1450, y: 350, w: 150, h: 30 }, { x: 1700, y: 450, w: 300, h: 50 }, { x: 2100, y: 380, w: 150, h: 30 }, { x: 2350, y: 300, w: 200, h: 30 }, { x: 2650, y: 380, w: 150, h: 30 }, { x: 2900, y: 450, w: 200, h: 50 }, { x: 3100, y: 450, w: 100, h: 50 }], enemies: [{ type: 'FIRE_ELEMENTAL', x: 250, y: 300 }, { type: 'LAVA_BLOB', x: 500, y: 380 }, { type: 'FIRE_ELEMENTAL', x: 750, y: 350 }, { type: 'LAVA_BLOB', x: 1050, y: 280 }, { type: 'FIRE_ELEMENTAL', x: 1300, y: 200 }, { type: 'LAVA_BLOB', x: 1550, y: 280 }, { type: 'FIRE_ELEMENTAL', x: 1850, y: 300 }, { type: 'LAVA_BLOB', x: 2200, y: 330 }, { type: 'FIRE_ELEMENTAL', x: 2450, y: 200 }, { type: 'LAVA_BLOB', x: 2750, y: 330 }], powerUp: 'BUBBLE', endX: 3100 },
       11: { name: 'Cloud Kingdom', bgColor: '#3a5a7a', groundColor: '#ffffff', width: 2400, vertical: false, platforms: [{ x: 0, y: 450, w: 600, h: 50 }, { x: 700, y: 400, w: 200, h: 30 }, { x: 1000, y: 350, w: 150, h: 30 }, { x: 1200, y: 450, w: 400, h: 50 }, { x: 1700, y: 380, w: 200, h: 30 }, { x: 2000, y: 450, w: 400, h: 50 }], enemies: [{ type: 'SKY_SPRITE', x: 400, y: 300 }, { type: 'LEPRECHAUN', x: 800, y: 370 }, { type: 'SKY_SPRITE', x: 1100, y: 250 }, { type: 'LEPRECHAUN', x: 1400, y: 420 }, { type: 'SKY_SPRITE', x: 1800, y: 280 }, { type: 'LEPRECHAUN', x: 2100, y: 380 }], powerUp: 'ICE', endX: 2300 },
       12: { name: 'Space', bgColor: '#000010', groundColor: '#1a1a3a', width: 3400, vertical: false, platforms: [{ x: 0, y: 450, w: 300, h: 50 }, { x: 400, y: 380, w: 150, h: 30 }, { x: 650, y: 300, w: 150, h: 30 }, { x: 900, y: 380, w: 150, h: 30 }, { x: 1150, y: 450, w: 250, h: 50 }, { x: 1500, y: 350, w: 150, h: 30 }, { x: 1750, y: 270, w: 150, h: 30 }, { x: 2000, y: 350, w: 150, h: 30 }, { x: 2250, y: 450, w: 300, h: 50 }, { x: 2650, y: 380, w: 150, h: 30 }, { x: 2900, y: 300, w: 150, h: 30 }, { x: 3150, y: 450, w: 250, h: 50 }], enemies: [{ type: 'STAR', x: 250, y: 300 }, { type: 'ALIEN', x: 500, y: 350 }, { type: 'STAR', x: 750, y: 250 }, { type: 'ALIEN', x: 1000, y: 350 }, { type: 'STAR', x: 1300, y: 300 }, { type: 'ALIEN', x: 1600, y: 320 }, { type: 'STAR', x: 1900, y: 250 }, { type: 'ALIEN', x: 2100, y: 320 }, { type: 'STAR', x: 2400, y: 300 }, { type: 'ALIEN', x: 2750, y: 330 }, { type: 'STAR', x: 3000, y: 250 }], powerUp: 'FIREBALL', endX: 3300 },
@@ -749,8 +749,8 @@
               projectiles.push({
                 x: player.x + player.width/2,
                 y: player.y + player.height/2,
-                width: 14,
-                height: 14,
+                width: 20,
+                height: 20,
                 vx: player.facing * 10,
                 vy: i * 5,
                 damage: 1,
@@ -772,9 +772,9 @@
                 width: 10,
                 height: 10,
                 vx: (player.facing * 2.5) + (Math.random() - 0.5) * 1,
-                vy: -2 - Math.random() * 2,
+                vy: -1 - Math.random() * 2,
                 damage: 1,
-                life: 90,
+                life: 180,
                 color: '#a0d8ff',
                 friendly: true,
                 type: 'bubble',
@@ -821,12 +821,12 @@
               projectiles.push({
                 x: player.x + player.width/2 + i * 20,
                 y: player.y + player.height/2,
-                width: 16,
-                height: 16,
+                width: 32,
+                height: 32,
                 vx: i * 2,
-                vy: -2.5,
+                vy: -7,
                 damage: 2,
-                life: 60,
+                life: 180,
                 color: '#8b7355',
                 friendly: true,
                 type: 'earth',
@@ -936,7 +936,7 @@
         }
       } else if (levelNum === 2) {
         ctx.fillStyle = '#ccaa4460';
-        ctx.fillRect(0, canvas.height / 2, canvas.width, canvas.height / 2);
+        ctx.fillRect(0, 280, canvas.width, canvas.height / 2);
         
         for (let i = 0; i < 12; i++) {
           const x = ((i * 350) - cameraX * 0.1) % (canvas.width + 350) - 175;
@@ -966,7 +966,7 @@
       } else if (levelNum === 3) {
         ctx.fillStyle = '#ffff9950';
         ctx.fillRect(0, 0, canvas.width, canvas.height / 2);
-        ctx.fillStyle = '#1a5a8a80';
+        ctx.fillStyle = '#1a5a80';
         ctx.fillRect(0, canvas.height / 2, canvas.width, canvas.height / 2);
         
         for (let i = 0; i < 8; i++) {
@@ -974,7 +974,7 @@
           ctx.strokeStyle = '#8b6914';
           ctx.lineWidth = 8;
           ctx.beginPath();
-          ctx.moveTo(x, 400);
+          ctx.moveTo(x, canvas.height / 2);
           ctx.lineTo(x, 120);
           ctx.stroke();
           
@@ -991,18 +991,37 @@
           ctx.ellipse(x + 20, 130, 40, 50, 0, 0, Math.PI * 2);
           ctx.fill();
         }
+        for (let i = 0; i < 10; i++) {
+          const x = ((i * 300) - cameraX * 0.15) % (canvas.width + 300) - 150;
+          ctx.fillStyle = '#1a5a80';
+          ctx.beginPath();
+          ctx.arc(x, 350 + Math.sin(Date.now() * 0.005 + i) * 20, 80, Math.PI, 2 * Math.PI);
+          ctx.fill();
+        }
         
         ctx.fillStyle = '#ffffff40';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
-      } else if (levelNum === 4) {
+      } 
+      else if (levelNum === 4) {
         ctx.fillStyle = '#2a5a4a';
+        ctx.fillStyle = '#dab445';
+        ctx.fillRect(0, 375, canvas.width, canvas.height / 2);
         for (let i = 0; i < 15; i++) {
           const x = ((i * 180) - cameraX * 0.2) % (canvas.width + 180) - 90;
+          ctx.fillStyle = '#2a5a4a';
           ctx.beginPath();
           ctx.moveTo(x, 400);
           ctx.lineTo(x + 30, 300);
           ctx.lineTo(x + 60, 400);
           ctx.closePath();
+          ctx.fill();
+        }
+        for (let i = 0; i < 20; i++) {
+          const x = ((i * 200) - cameraX * 0.2) % (canvas.width + 200) - 100;
+          const colors = ['#ff4500', '#ffaa00', '#00aa00', '#0088ff', '#ff69b4'];
+          ctx.fillStyle = colors[i % colors.length];
+          ctx.beginPath();
+          ctx.arc(x, 150 + (i % 4) * 50, 25, 0, Math.PI * 2);
           ctx.fill();
         }
         for (let i = 0; i < 20; i++) {
@@ -1074,34 +1093,19 @@
           ctx.fill();
         }
       } else if (levelNum === 7) {
-        for (let i = 0; i < 15; i++) {
-          const x = ((i * 240) - cameraX * 0.2) % (canvas.width + 240) - 120;
-          const y = 50 + (i % 4) * 60;
-          
-          ctx.strokeStyle = '#2a8a2a';
-          ctx.lineWidth = 2;
+        for (let i = 0; i < 10; i++) {
+          const x = ((i * 250) - cameraX * 0.2) % (canvas.width + 250) - 125;
+          ctx.fillStyle = '#ff69b4';
           ctx.beginPath();
-          ctx.moveTo(x, y + 80);
-          ctx.quadraticCurveTo(x - 25, y + 40, x - 15, y);
-          ctx.stroke();
-          
-          ctx.strokeStyle = '#3a9a3a';
-          ctx.lineWidth = 1.5;
+          ctx.arc(x, 100 + (i % 3) * 50, 20, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.fillStyle = '#ff1493';
           ctx.beginPath();
-          ctx.moveTo(x + 15, y + 80);
-          ctx.quadraticCurveTo(x + 35, y + 40, x + 25, y);
-          ctx.stroke();
-        }
-        
-        for (let i = 0; i < 20; i++) {
-          const x = ((i * 200) - cameraX * 0.15) % (canvas.width + 200) - 100;
-          ctx.fillStyle = '#666688';
-          ctx.beginPath();
-          ctx.arc(x, 80 + (i % 3) * 60, 18, 0, Math.PI * 2);
+          ctx.arc(x + 30, 140, 15, 0, Math.PI * 2);
           ctx.fill();
         }
       } else if (levelNum === 8) {
-        ctx.fillStyle = '#1a0a0a';
+        ctx.fillStyle = 'black';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
         
         ctx.fillStyle = '#2a1a0a';
@@ -1157,16 +1161,16 @@
           ctx.fill();
         }
       } else if (levelNum === 10) {
-        ctx.fillStyle = '#1a0a0a';
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-        for (let i = 0; i < 12; i++) {
-          const x = ((i * 300) - cameraX * 0.25) % (canvas.width + 300) - 150;
-          ctx.fillStyle = '#ff6600';
-          for (let j = 0; j < 4; j++) {
-            ctx.beginPath();
-            ctx.arc(x + (j * 35), 80 + (j * 25), 20, 0, Math.PI * 2);
-            ctx.fill();
-          }
+        for (let i = 0; i < 10; i++) {
+          const x = ((i * 250) - cameraX * 0.2) % (canvas.width + 250) - 125;
+          ctx.fillStyle = '#ff8500';
+          ctx.beginPath();
+          ctx.arc(x, 100 + (i % 3) * 50, 20, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.fillStyle = '#ff7000';
+          ctx.beginPath();
+          ctx.arc(x + 30, 140, 15, 0, Math.PI * 2);
+          ctx.fill();
         }
       } else if (levelNum === 11) {
         const rainbowColors = ['#ff0000', '#ff7f00', '#ffff00', '#00ff00', '#0000ff', '#4b0082', '#9400d3'];
@@ -1252,34 +1256,26 @@
           }
         }
         
-        for (let i = 0; i < 60; i++) {
-          ctx.strokeStyle = '#00ffff';
-          ctx.lineWidth = 2;
-          const rainStartX = ((i * 35) - cameraX * 0.3) % (canvas.width + 35) - 17;
-          const rainStartY = ((i * 25) % 400);
-          const rainY = (rainStartY + Date.now() * 0.4) % (canvas.height + 50) - 25;
-          ctx.beginPath();
-          ctx.moveTo(rainStartX, rainY);
-          ctx.lineTo(rainStartX, rainY + 15);
-          ctx.stroke();
+        for (let i = 0; i < 50; i++) {
+          ctx.fillStyle = '#00ffff';
+          const x = Math.random() * canvas.width;
+          const y = Math.random() * 300;
+          ctx.fillRect(x, y, 2, 10);
         }
+        
       } else if (levelNum === 14) {
         ctx.fillStyle = '#1a2a1a';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
         ctx.fillStyle = '#3a2a0a80';
         ctx.fillRect(0, canvas.height / 2, canvas.width, canvas.height / 2);
         
-        for (let i = 0; i < 60; i++) {
-          ctx.strokeStyle = '#00ffff';
-          ctx.lineWidth = 2;
-          const rainStartX = ((i * 35) - cameraX * 0.3) % (canvas.width + 35) - 17;
-          const rainStartY = ((i * 25) % 400);
-          const rainY = (rainStartY + Date.now() * 0.4) % (canvas.height + 50) - 25;
-          ctx.beginPath();
-          ctx.moveTo(rainStartX, rainY);
-          ctx.lineTo(rainStartX, rainY + 15);
-          ctx.stroke();
+        for (let i = 0; i < 50; i++) {
+          ctx.fillStyle = '#00ffff';
+          const x = Math.random() * canvas.width;
+          const y = Math.random() * 300;
+          ctx.fillRect(x, y, 2, 10);
         }
+        
       } else if (levelNum === 15) {
         ctx.fillStyle = '#ffffff90';
         ctx.beginPath();
@@ -1331,11 +1327,11 @@
           const x = ((i * 280) - cameraX * 0.15) % (canvas.width + 280) - 140;
           ctx.fillStyle = '#8b6914';
           ctx.fillRect(x, 120, 30, 180);
-          ctx.fillStyle = '#228b22';
+          ctx.fillStyle = '#ff6600';
           ctx.beginPath();
           ctx.ellipse(x + 15, 80, 45, 60, 0, 0, Math.PI * 2);
           ctx.fill();
-          ctx.fillStyle = '#1a6b1a';
+          ctx.fillStyle = '#ff4500';
           ctx.beginPath();
           ctx.ellipse(x - 5, 110, 35, 45, 0, 0, Math.PI * 2);
           ctx.fill();
@@ -1344,20 +1340,22 @@
           ctx.fill();
         }
       } else if (levelNum === 18) {
-        ctx.fillStyle = '#3a5a3a80';
-        ctx.fillRect(0, 0, canvas.width, canvas.height / 2);
-        ctx.fillStyle = '#1a4a1a80';
-        ctx.fillRect(0, canvas.height / 2, canvas.width, canvas.height / 2);
+        const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
+        gradient.addColorStop(0, '#6a8a4a');
+        gradient.addColorStop(0.4, '#5a7a4a');
+        gradient.addColorStop(1, '#1a5a8a');
+        ctx.fillStyle = gradient;
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
         
         for (let i = 0; i < 12; i++) {
           const x = ((i * 300) - cameraX * 0.15) % (canvas.width + 300) - 150;
-          ctx.fillStyle = '#228b22';
+          ctx.fillStyle = '#8b6914';
           ctx.fillRect(x, 120, 45, 280);
-          ctx.fillStyle = '#1a6b1a';
+          ctx.fillStyle = '#228b22';
           ctx.beginPath();
           ctx.ellipse(x + 22.5, 60, 60, 75, 0, 0, Math.PI * 2);
           ctx.fill();
-          ctx.fillStyle = '#2a8a2a';
+          ctx.fillStyle = '#1a6b1a';
           ctx.beginPath();
           ctx.ellipse(x + 22.5, 110, 40, 55, 0, 0, Math.PI * 2);
           ctx.fill();
@@ -1381,16 +1379,11 @@
           ctx.fillStyle = '#ffff0050';
           ctx.fillRect(x + 110, 60, 90, 70);
         }
-        for (let i = 0; i < 60; i++) {
-          ctx.strokeStyle = '#00ffff';
-          ctx.lineWidth = 2;
-          const rainStartX = ((i * 35) - cameraX * 0.3) % (canvas.width + 35) - 17;
-          const rainStartY = ((i * 25) % 400);
-          const rainY = (rainStartY + Date.now() * 0.4) % (canvas.height + 50) - 25;
-          ctx.beginPath();
-          ctx.moveTo(rainStartX, rainY);
-          ctx.lineTo(rainStartX, rainY + 15);
-          ctx.stroke();
+        for (let i = 0; i < 50; i++) {
+          ctx.fillStyle = '#00ffff';
+          const x = Math.random() * canvas.width;
+          const y = Math.random() * 300;
+          ctx.fillRect(x, y, 2, 10);
         }
       } else if (levelNum === 21) {
         ctx.fillStyle = '#0a0a1a';
